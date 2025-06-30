@@ -1,0 +1,94 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2025-05-06T00:00:00.000Z",
+  "__export_source": "insomnia.desktop.app:v2024.2.0",
+  "resources": [
+    {
+      "_id": "wrk_001",
+      "created": 0,
+      "description": "",
+      "name": "Siswa API",
+      "type": "workspace",
+      "_type": "workspace"
+    },
+    {
+      "_id": "env_001",
+      "parentId": "wrk_001",
+      "name": "Base Environment",
+      "_type": "environment",
+      "data": {
+        "base_url": "http://localhost:5000"
+      }
+    },
+    {
+      "_id": "req_001",
+      "parentId": "wrk_001",
+      "name": "GET Semua Siswa",
+      "_type": "request",
+      "method": "GET",
+      "url": "{{ base_url }}/api/siswa",
+      "body": {},
+      "parameters": [],
+      "headers": []
+    },
+    {
+      "_id": "req_002",
+      "parentId": "wrk_001",
+      "name": "GET Satu Siswa (id=1)",
+      "_type": "request",
+      "method": "GET",
+      "url": "{{ base_url }}/api/siswa/1",
+      "body": {},
+      "parameters": [],
+      "headers": []
+    },
+    {
+      "_id": "req_003",
+      "parentId": "wrk_001",
+      "name": "POST Tambah Siswa",
+      "_type": "request",
+      "method": "POST",
+      "url": "{{ base_url }}/api/siswa",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"nama\": \"Budi\",\n  \"nilai\": 90\n}"
+      },
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ]
+    },
+    {
+      "_id": "req_004",
+      "parentId": "wrk_001",
+      "name": "PUT Update Siswa (id=1)",
+      "_type": "request",
+      "method": "PUT",
+      "url": "{{ base_url }}/api/siswa/1",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"nama\": \"Budi Updated\",\n  \"nilai\": 85\n}"
+      },
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ]
+    },
+    {
+      "_id": "req_005",
+      "parentId": "wrk_001",
+      "name": "DELETE Hapus Siswa (id=1)",
+      "_type": "request",
+      "method": "DELETE",
+      "url": "{{ base_url }}/api/siswa/1",
+      "body": {},
+      "parameters": [],
+      "headers": []
+    }
+  ]
+}
